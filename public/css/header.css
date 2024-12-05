@@ -1,0 +1,153 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+.header {
+    background-color: #073c6b;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logotipos */
+.logo-left img,
+.logo-right img {
+    height: 40px;
+    width: auto;
+}
+
+/* Menú */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu > li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 7px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #104179;
+    transform: scale(1.05);
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    background-color: #073c6b;
+    padding: 10px;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    display: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+.submenu a {
+    font-size: 12px;
+    color: #ffffff;
+    padding: 7px 7px;
+    transition: background-color 0.3s;
+}
+
+.submenu a:hover {
+    background-color: #104a8d;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+/* Barra de búsqueda */
+.search-icon img {
+    cursor: pointer;
+    height: 24px;
+    width: auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: max-width 0.3s ease, opacity 0.3s ease;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #1565C0;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #104a8d;
+}
+
+/* Clases adicionales */
+.hidden {
+    max-width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visible {
+    max-width: 200px;
+    opacity: 1;
+    pointer-events: auto;
+}
